@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @color_palette.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @color_palette.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@color_palette.picture_url) if @color_palette.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_color_palette_path(@color_palette) %> |
+<%= link_to 'Back', color_palettes_path %>
